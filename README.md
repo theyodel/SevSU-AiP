@@ -1,2 +1,2 @@
-# SevGU-AiP
+# SevSU-AiP
 
