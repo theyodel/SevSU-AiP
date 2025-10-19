@@ -27,6 +27,16 @@ int main()
         cout << "Ошибка: шаг dx должен быть положительным!" << endl;
         return 1;
     }
+    if (cos(x_start) == 0)
+    {
+        printf("Ошибка: cos(x) = 0, что по условию не может быть!\n");
+        return 1;
+    }
+    if (x_start <= 0)
+    {
+        printf("Ошибка: x = 0, что по условию не может быть!\n");
+        return 1;
+    }
 
     cout << fixed << setprecision(4);
 
@@ -51,9 +61,7 @@ int main()
             z = tan(x);
         }
         cout << "|  " << setw(9) << x << "  |" << setw(10) << z << "      |" << endl;
+        cout << "|_____________|________________|" << endl;
     }
-
-    cout << "|_____________|________________|" << endl;
-
     return 0;
 }
