@@ -6,9 +6,7 @@ using namespace std;
 
 int main()
 {
-    float a, b, x_start, x_end, dx;
-
-    // Ввод параметров
+    float a, b, x_start, x_end, dx, z;
     cout << "Введите параметр a: ";
     cin >> a;
     cout << "Введите параметр b: ";
@@ -19,33 +17,45 @@ int main()
     cin >> x_end;
     cout << "Введите шаг dx: ";
     cin >> dx;
-    float z = 0;
+    z = 0;
 
-    // Проверка корректности шага
-    if (dx <= 0)
+    if (dx == 0)
     {
-        cout << "Ошибка: шаг dx должен быть положительным!" << endl;
+        cout << "Ошибка: шаг dx должен быть ненулевым!" << endl;
         return 1;
     }
     if (cos(x_start) == 0)
     {
-        printf("Ошибка: cos(x) = 0, что по условию не может быть!\n");
+        cout << "Ошибка: cos(x) = 0, что по условию не может быть!" << endl;
         return 1;
     }
     if (x_start <= 0)
     {
-        printf("Ошибка: x = 0, что по условию не может быть!\n");
+        cout << "Ошибка: x = 0, что по условию не может быть!" << endl;
+        return 1;
+    }
+    if (cos(x_end) == 0)
+    {
+        cout << "Ошибка: cos(x_end) = 0, что по условию не может быть!" << endl;
+        return 1;
+    }
+    if (x_end <= 0)
+    {
+        cout << "Ошибка: x_end = 0, что по условию не может быть!" << endl;
+        return 1;
+    }
+    if (x_start < x_end)
+    {
+        cout << "Ошибка: x_start < x_end, что по условию не может быть!" << endl;
         return 1;
     }
 
     cout << fixed << setprecision(4);
 
-    cout << "\n";
     cout << "________________________________" << endl;
-    cout << "|      x      |    z = f(x)    |" << endl;
+    cout << "|      x      |      f(x)      |" << endl;
     cout << "|_____________|________________|" << endl;
 
-    // Вычисление и вывод значений функции
     for (float x = x_start; x <= x_end; x += dx)
     {
         if (x <= a)

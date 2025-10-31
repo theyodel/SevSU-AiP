@@ -1,3 +1,7 @@
 *.exe
 .vscode/*
 .idea
+*.py
+*/zashita.cpp
+*/zashita.c
+*/zashita.exe

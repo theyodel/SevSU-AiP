@@ -16,16 +16,21 @@ int main() {
     printf("Введите шаг dx: ");
     scanf("%f", &dx);
     
-    if (dx <= 0) {
-        printf("Ошибка: шаг dx должен быть положительным!\n");
-        return 1;
-    }
-    if (cos(x) == 0) {
-        printf("Ошибка: cos(x) = 0, что по условию не может быть!\n");
-        return 1;
-    }
-    if (x <= 0) {
-        printf("Ошибка: x = 0, что по условию не может быть!\n");
+    // if (dx <= 0) {
+    //     printf("Ошибка: шаг dx должен быть положительным!\n");
+    //     return 1;
+    // }
+    // if (cos(x) == 0) {
+    //     printf("Ошибка: cos(x) = 0, что по условию не может быть!\n");
+    //     return 1;
+    // }
+    // if (x <= 0) {
+    //     printf("Ошибка: x = 0, что по условию не может быть!\n");
+    //     return 1;
+    // }
+    if (x_start < x_end)
+    {
+        printf("Ошибка: x_start < x_end, что по условию не может быть!\n");
         return 1;
     }
     
@@ -34,9 +39,9 @@ int main() {
     printf("|      x      |    z = f(x)    |\n");
     printf("|_____________|________________|\n");
     
-    x;
+    x = x_start;
     while (x <= x_end) {
-        printf("| %9.4f   |",x);
+        printf("| %9.4f |",x);
         if (x <= a) {
             z = log(x) + sin(x);
         }
@@ -46,7 +51,7 @@ int main() {
         else {
             z = tan(x);
         }
-        printf("    %-11.4f |\n",z);
+        printf(" %-11.4f |\n",z);
         x += dx;
         printf("|_____________|________________|\n");
     };
