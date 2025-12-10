@@ -2,10 +2,10 @@
 #include <math.h>
 
 // Объявление функций
-int countCondition(int *, int );
-int *inputSequence(int *);
-void printSequence(int *, int);
-void partialSort(int *, int); 
+int countCondition(int *arr, int n);
+int *inputSequence(int *n);
+void printSequence(int *arr, int n);
+void partialSort(int *arr, int n);
 
 int main() {
     int *arr = NULL, n = 0, choice;

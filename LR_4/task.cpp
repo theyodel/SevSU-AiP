@@ -114,7 +114,7 @@ int countCondition(int *arr, int n)
 int *inputSequence(int *n)
 {
     cout << "Введите количество элементов последовательности: ";
-    scanf("%d", n);
+    cin >> *n;
 
     if (*n <= 0)
     {
