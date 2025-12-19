@@ -130,7 +130,7 @@ void printRoutes(struct route *arr, int n) {
     for (int i = 0; i < n; i++) {
         printf("%d) Номер маршрута: %d\n", arr[i].number, arr[i].routeNumber);
         printf("Начальная точка: %s \nКонечная точка: %s\n", arr[i].startPoint, arr[i].endPoint);
-        printf("Цена проезда: %.2f\n", arr[i].price);
+        printf("Цена проезда: %.2f₽\n", arr[i].price);
         if (arr[i].time % 60 == 0) {
             printf("Время в пути: %dч\n", arr[i].time/60);
         }
