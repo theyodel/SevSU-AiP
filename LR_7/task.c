@@ -70,7 +70,7 @@ int main() {
             
             case 4:
                 if (arr == NULL) {
-                    printf("Последовательность не введена!\n");
+                    printf("Маршруты не введены!\n");
                 } 
                 else {
                     sortByPrice(arr, n);
@@ -112,11 +112,9 @@ struct route* scanRoutes(int n) {
 
        printf("Введите цену маршрута: ");
        scanf("%f", &arr[i].price);
-       while (getchar() != '\n');
 
        printf("Введите время в пути (в минутах): ");
        scanf("%d", &arr[i].time);
-       while (getchar() != '\n');
 
        printf("----------------------------------------------\n");
    }
